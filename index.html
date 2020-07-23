@@ -8,27 +8,36 @@
     <title>FIAT</title>
     <!--stylesheet de bootstrap - CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/fontawesome.min.js"></script>
 </head>
 <body>
 
-	<!-- FLORENCIA-->
+	<!-- LEANDRO-->
     <header>
         <!--uso de clases para margin y padding-->
-        <nav class="bg-dark p-3 header">
+        <nav class="bg-danger p-3 header">
             <!--clase container-->
             <div class="container">
                 <div class="row">
+				<nav class="navbar ">
+					<a class="navbar-brand" href="#">
+						<img src="imagenes/fiat.png" width="60" height="60" alt="">
+					</a>
+					</nav>
                     <div class="col">
-                        <!--ejemplo de agregado de componentes-->
+						<!--ejemplo de agregado de componentes-->
                         <ul class="nav justify-content-end">
                             <li class="nav-item">
-                                <a class="nav-link text-white active" href="#">Home</a>
+                                <a class="nav-link text-white active" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#noticias">Noticias</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#acam-contact">Precios</a>
+                                <a class="nav-link text-white" href="#contacto">Contacto</a>
+                            </li>                           
+							<li class="nav-item">
+                                <a class="nav-link text-white" href="#footer">Pie</a>
                             </li>
                         </ul>
                     </div>
@@ -37,13 +46,17 @@
         </nav>
     </header>
 	
-	<!-- FIN FLORENCIA-->
+	<!-- FIN LEANDRO-->
+	
 	
 	
 	
 <!-- MARIAN-->
 	<main class="container mt-5">
-        <div id ="noticias1"class="card" style="width: 18rem;">
+
+	<div class="row d-flex justify-content-center">
+
+        <div id ="noticias"class="card" style="width: 18rem;">
             <img src="https://fiat.com.ar/sites/default/files/styles/bg_contenido_home_widget/public/WhatsAppImage20200702at152013.jpeg?itok=LZWHnnrL" class="card-img-top" alt="...">
 
             <div class="card-body">
@@ -60,7 +73,7 @@
             <div class="card-body">
                 <h5 class="card-title">Toro Ranch</h5>
                 <p class="card-text">Nueva versión</p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
                 Ver más
                 </button>
             </div>
@@ -71,9 +84,10 @@
         <div class="card-body">
             <h5 class="card-title">Abarth</h5>
             <p class="card-text">Premiaciones inolvidables</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
             Ver más
             </button>
+        </div>
         </div>
         </div>
 	</main>	
@@ -102,7 +116,8 @@
         </div>
     </div>
     </div>
-    <div class="modal fade" id="noticias2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -121,26 +136,8 @@
             </div>
         </div>
         </div>
-        <div class="modal fade" id="noticias2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Presentamos la nueva versión Fiat Toro Ranch 2.0</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Con más de 33 mil Toros comercializadas desde su lanzamiento, la marca italiana presenta una nueva versión de su multipremiada pick up.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="modal fade" id="noticias2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -164,65 +161,114 @@
     
 <!-- MARIAN-->
 	
+		<br><br><br><br>
+	
+		<!-- FLORENCIA-->
+<div class="container">
+  <form>
+    <h2>Contactanos</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="first">Nombre</label>
+          <input type="text" class="form-control" placeholder="Ingrese su Nombre" id="nombre">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="last">Apellido</label>
+          <input type="text" class="form-control" placeholder="Ingrese su apellido" id="apellido">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="company">Compañia</label>
+          <input type="text" class="form-control" placeholder="Ingrese La Compania" id="compania">
+        </div>
+
+
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="phone">Telefono</label>
+          <input type="tel" class="form-control" id="telefono" placeholder="telefono">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+    <!--  row   -->
+
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="email">Email </label>
+          <input type="email" class="form-control" id="email" placeholder="email">
+        </div>
+      </div>
+      <!--  col-md-6   -->
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="url">Sitio Web <small>Por Favor Incluya http://</small></label>
+          <input type="url" class="form-control" id="url" placeholder="url">
+        </div>
+
+      </div>
+      <!--  col-md-6   -->
+    </div>
+    <!--  row   -->
+
+    <label for="contact-preference">¿Cuándo es el mejor momento del día para contactarlo?</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="contact-preference" id="contact-preference" value="am" checked>Mañana
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="contact-preference" id="contact-preference" value="pm" checked>Tarde
+      </label>
+    </div>
+
+    <label for="newsletter">¿Desea recibir nuestro boletín electrónico ?</label>
+    <div class="checkbox">
+
+      <label>
+        <input type="checkbox" value="Sure!" id="newsletter"> Seguro!
+      </label>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+	<!-- _FIN FLORENCIA-->
+	
+	<br><br><br><br>
 	
 		<!-- RIQUELME-->
 	
-<footer class="page-footer font-small cyan darken-3">
-
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!-- Grid row-->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-12 py-5">
-        <div class="mb-5 flex-center">
-
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Pinterest-->
-          <a class="pin-ic">
-            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-          </a>
-        </div>
-      </div>
-      <!-- Grid column -->
-
+<footer id="footer" class="py-4 bg-danger text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Marian, Florencia, Riquelme y Leandro</small>
     </div>
-    <!-- Grid row-->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
+  </footer>
 	<!-- ./Footer -->
 	
 	<!-- FIN RIQUELME-->
+	
 
     </main>
     <!--scripts de bootstrap - CDN-->
